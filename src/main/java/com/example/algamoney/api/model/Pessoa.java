@@ -1,5 +1,6 @@
 package com.example.algamoney.api.model;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +15,9 @@ public class Pessoa {
 	private long codigo;
 	private String nome;
 	private boolean ativo;
+	
+	@Embedded
+	private Endereço Endereço;
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
