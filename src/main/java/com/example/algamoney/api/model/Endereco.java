@@ -3,14 +3,16 @@ package com.example.algamoney.api.model;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Endereço {
+public class Endereco {
 
 	private String logradouro;
 	private String numero;
+	private String complemento;
 	private String bairro;
 	private String cep;
 	private String cidade;
 	private String estado;
+	
 	public String getLogradouro() {
 		return logradouro;
 	}
@@ -47,6 +49,13 @@ public class Endereço {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	public String getComplemento() {
+		return complemento;
+	}
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+	
 
 	
 
