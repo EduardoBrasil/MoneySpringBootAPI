@@ -32,7 +32,7 @@ public class Lancamento {
 	
 	private BigDecimal valor;
 	
-	private String obsevação;
+	private String observacao;
 	
 	@Enumerated(EnumType.STRING)
 	private TipoLancamento tipo;
@@ -40,7 +40,6 @@ public class Lancamento {
 	@ManyToOne
 	@JoinColumn(name= "codigo_categoria")
 	private Categoria categoria;
-	
 	
 	@ManyToOne
 	@JoinColumn(name= "codigo_pessoa")
@@ -96,14 +95,13 @@ public class Lancamento {
 		this.valor = valor;
 	}
 
-
-	public String getObsevação() {
-		return obsevação;
+	public String getObservacao() {
+		return observacao;
 	}
 
 
-	public void setObsevação(String obsevação) {
-		this.obsevação = obsevação;
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 
 
@@ -130,6 +128,8 @@ public class Lancamento {
 	public Pessoa getPessoa() {
 		return pessoa;
 	}
+	
+	
 
 
 	public void setPessoa(Pessoa pessoa) {
